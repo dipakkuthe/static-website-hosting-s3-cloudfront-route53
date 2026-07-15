@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS Static Website</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; color: #1f2937; }
+    main { max-width: 880px; margin: 80px auto; padding: 32px; background: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+    h1 { color: #0f766e; }
+    code { background: #eef2ff; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Static Website on AWS</h1>
+    <p>This page is designed to be hosted on Amazon S3 and delivered through CloudFront.</p>
+    <p>Update files locally, sync to S3, then invalidate CloudFront cache.</p>
+    <code>aws s3 sync site/ s3://your-bucket-name --delete</code>
+  </main>
+</body>
+</html>
